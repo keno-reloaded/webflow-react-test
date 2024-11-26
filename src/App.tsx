@@ -11,13 +11,15 @@ const App: React.FC = () => {
 
   return (
     <Inline alignItems="center">
-      <SearchInput
-        name="search"
-        placeholder="Placeholder text - long text will be truncated"
-        value={value}
-        onChange={onChange}
-        onClear={onClear}
-      />
+      <Box>
+        <SearchInput
+          name="search"
+          placeholder="Placeholder text - long text will be truncated"
+          value={value}
+          onChange={onChange}
+          onClear={onClear}
+        />
+      </Box>
     </Inline>
   );
 };
