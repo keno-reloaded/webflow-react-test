@@ -1,11 +1,8 @@
-@import url('../../node_modules/@amboss/design-system/build/scss/_theming.scss');
-@import url('../../node_modules/@amboss/design-system/build/scss/_variables.scss');
-
-:root {
-  --color-canvas: #eef2f5;
-}
+@use '@amboss/design-system/scss/theming' as theming;
+@forward '@amboss/design-system/scss/variables';
+@include theming.theming();
 
 .app {
-  background-color: var(--color-canvas);
   // background-color: $colorCanvas;
+  background-color: var(--color-canvas);
 }
