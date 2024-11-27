@@ -1,0 +1,11 @@
+@import url('../../node_modules/@amboss/design-system/build/scss/_theming.scss');
+@import url('../../node_modules/@amboss/design-system/build/scss/_variables.scss');
+
+:root {
+  --color-canvas: #eef2f5;
+}
+
+.app {
+  background-color: var(--color-canvas);
+  // background-color: $colorCanvas;
+}
