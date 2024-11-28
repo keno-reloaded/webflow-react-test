@@ -3,6 +3,5 @@
 @include theming.theming();
 
 .app {
-  // background-color: $colorCanvas;
   background-color: var(--color-canvas);
 }
