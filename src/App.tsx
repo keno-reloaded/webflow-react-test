@@ -15,7 +15,7 @@ export const App: React.FC = () => {
       <Stack space="xl">
         <Stack space="l">
           <Inline vAlignItems="center">
-          <H1>Welcome to design system</H1>
+          <H1>Welcome to design system at AMBOSS</H1>
           <Badge text="BETA" color="purple" />
           </Inline>
           <Columns gap="l">
