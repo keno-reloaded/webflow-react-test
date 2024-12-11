@@ -1,13 +1,18 @@
 import React, { useCallback } from 'react';
 import './styles/App.scss';
-import { Badge, Box, Button, Card, CardBox, Checkbox, Column, Columns, Divider, FormFieldGroup, H1, Icon, Inline, Input, Link, Radio, SearchInput, SearchResult, Stack, Text, Toggle } from "@amboss/design-system";
+import { Badge, Box, Button, Card, CardBox, Checkbox, Column, Columns, Divider, FormFieldGroup, H1, Icon, Inline, Input, Link, Modal, Radio, SearchInput, SearchResult, Stack, Text, Toggle } from "@amboss/design-system";
 
 export const App: React.FC = () => {
 
   const [value, setValue] = React.useState("");
+  const [isOpen, setIsOpen] = React.useState(false);
 
   const onChange = useCallback((e: { target: { value: React.SetStateAction<string>; }; }) => setValue(e.target.value), [setValue]);
   const onClear = useCallback(() => setValue(""), [setValue]);
+
+  const handleButtonClick = () => {
+    setIsOpen(true);
+  };
 
   return (
     <div className="app">
@@ -26,6 +31,42 @@ export const App: React.FC = () => {
                 your feedback to the Design System team. Enjoy!
               </Text>
             </Column>
+            <Column>
+  
+      {isOpen ? (
+        <Modal
+          onAction={(action) => {
+            if (action === "cancel") {
+              setIsOpen(false);
+            }
+            if (action === "action") {
+              setIsOpen(false);
+            }
+          }}
+          header= "Delete this study plan?"
+          actionButton={{
+            text: "Delete",
+            destructive: true,
+          }}
+          secondaryButton={{
+            text: "Cancel",
+          }}
+        >
+          <Modal.Stack>
+          <Modal.Text>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+            sollicitudin vel erat sit amet vehicula. Morbi vehicula, ante a
+            sollicitudin vel erat sit amet vehicula.
+          </Modal.Text>
+          </Modal.Stack>
+        </Modal>
+      ) : (
+        <Button variant="secondary" onClick={handleButtonClick}>
+          Click me for a full screen
+        </Button>
+      )}
+    
+    </Column>
           </Columns>
         </Stack>
 
