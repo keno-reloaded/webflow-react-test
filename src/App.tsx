@@ -34,7 +34,7 @@ export const App: React.FC = () => {
             <Card title="Let's start with some Text">
               <CardBox>
                 <Stack space="xs">
-                  <Text weight="bold"> Text can be extra small : </Text>
+                  <Text weight="bold"> Text can be extra small: </Text>
                   <Text size="xs">
                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
                     Aenean commodo ligula eget dolor.
@@ -44,7 +44,7 @@ export const App: React.FC = () => {
               <Divider />
               <CardBox>
                 <Stack space="xs">
-                  <Text weight="bold"> Or simply small : </Text>
+                  <Text weight="bold"> Or simply small: </Text>
                   <Text size="s">
                     Nullam dictum felis eu pede mollis pretium. Integer
                     tincidunt. Cras dapibus. Vivamus elementum semper nisi.
@@ -55,7 +55,7 @@ export const App: React.FC = () => {
               <Divider />
               <CardBox>
                 <Stack space="xs">
-                  <Text weight="bold"> Or medium size : </Text>
+                  <Text weight="bold"> Or medium size: </Text>
                   <Text size="m">
                     Aenean leo ligula, porttitor eu, consequat vitae, eleifend
                     ac, enim. Aliquam lorem ante, dapibus in, viverra quis,
@@ -83,7 +83,7 @@ export const App: React.FC = () => {
               <Divider />
               <CardBox>
                 <Stack space="xs">
-                  <Text weight="bold"> Or tertiary Text : </Text>
+                  <Text weight="bold"> Or tertiary Text: </Text>
                   <Text size="m" color="tertiary">
                     Itaque earum rerum hic tenetur a sapiente delectus, ut aut
                     reiciendis voluptatibus maiores alias consequatur aut
