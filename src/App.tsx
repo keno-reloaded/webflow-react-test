@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react';
 import './styles/App.scss';
-import { Badge, Box, Button, Card, CardBox, Column, Columns, Divider, H1, Icon, Inline, Link, SearchInput, SearchResult, Stack, Text } from "@amboss/design-system";
+import { Badge, Box, Button, Card, CardBox, Checkbox, Column, Columns, Divider, FormFieldGroup, H1, Icon, Inline, Input, Link, Radio, SearchInput, SearchResult, Stack, Text, Toggle } from "@amboss/design-system";
 
 export const App: React.FC = () => {
 
@@ -174,6 +174,38 @@ export const App: React.FC = () => {
           </Column>
         </Columns>
       </Stack>
+    </Box>
+    <Box space="xxl">
+      <Card title="Let's add a beautiful form">
+        <CardBox>
+          <Stack space="m">
+            <Input
+              name="username"
+              label="Username"
+              labelHint="username hint"
+              value={undefined}
+              placeholder="username"
+            />
+            <Input
+              type="password"
+              name="password"
+              labelHint="password hint"
+              label="Password"
+              value={undefined}
+              placeholder="password"
+            />
+            <FormFieldGroup label="Type" labelHint="OPTIONAL">
+              <Radio label="Frontend" name="type" />
+              <Radio label="Backend" name="type" />
+              <Radio label="Fullstack" name="type" />
+            </FormFieldGroup>
+
+            <Checkbox name="remeberme" label="Remember me?" />
+
+            <Toggle name="enable" label="Enable awesomeness" />
+          </Stack>
+        </CardBox>
+      </Card>
     </Box>
     </div>
   );
